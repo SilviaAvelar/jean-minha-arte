@@ -54,7 +54,6 @@ Uma galeria virtual que celebra a diversidade artística de **Jean Carlos**, apr
     "image-optimization": "Lazy Loading"
   }
 }
-```
 
 📦 Instalação e Uso
 # Clone o repositório
@@ -75,38 +74,44 @@ npm run build
 🎯 Estrutura do Projeto
 jean-minha-arte/
 ├── 📁 public/images/          # Galeria de obras organizadas
-│   ├── 🎨 realismo/          # Obras em grafite
-│   ├── ✨ chibi/             # Personagens estilo japonês
-│   ├── 🌊 aguarela/         # Pinturas em água
+│   ├── 🎨 realismo/           # Obras em grafite
+│   ├── ✨ chibi/              # Personagens estilo japonês
+│   ├── 🌊 aguarela/           # Pinturas em água
 │   └── ... (+10 categorias)
 ├── 📁 src/
-│   ├── 🎭 components/       # Componentes reutilizáveis
-│   ├── 📄 pages/           # Páginas da aplicação
-│   ├── 🗃️ data/            # Dados das obras de arte
-│   └── 🛠️ utils/           # Utilitários e funções
-└── ⚙️ configurações/        # Configurações do projeto
+│   ├── 🎭 components/         # Componentes reutilizáveis
+│   ├── 📄 pages/              # Páginas da aplicação
+│   ├── 🗃️ data/               # Dados das obras de arte
+│   └── 🛠️ utils/              # Utilitários e funções
+└── ⚙️ configurações/          # Configurações do projeto
 
 👨‍🎨 Sobre o Artista
 Jean Carlos - Artista profissional com mais de 20 anos de experiência, especializado em múltiplas técnicas desde o realismo clássico até a arte digital contemporânea. Sua obra transita entre o tradicional e o moderno, sempre com excelência técnica e sensibilidade artística.
-
 "Cada traço conta uma história, cada cor expressa uma emoção" - Jean Carlos
-
 🌐 Deploy
 Status: 🟢 Online
 Plataforma: [Netlify/Vercel]
 URL: [em breve]
+
 # Comando para deploy
 npm run build
 # → Upload da pasta 'dist' para a plataforma escolhida
 
 🤝 Contribuições
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
-
+<br>
 <div align="center">
 "A arte lava da alma a poeira do dia a dia." - Picasso
+<br><br>
 ⭐ Deixe uma estrela se este projeto inspirou você!
+<br><br>
+![alt text](https://img.shields.io/github/stars/SilviaAvelar/jean-minha-arte?style=social)
 
-https://img.shields.io/github/stars/SilviaAvelar/jean-minha-arte?style=social
-https://img.shields.io/github/forks/SilviaAvelar/jean-minha-arte?style=social
-
-</div> ```
+![alt text](https://img.shields.io/github/forks/SilviaAvelar/jean-minha-arte?style=social)
+</div>
+```
+O que fazer depois de colar:
+Salve o arquivo (Ctrl + S).
+Vá na aba do Git no VS Code.
+Faça o Commit ("Atualizando README") e dê o Sync/Push.
+Olhe no site do GitHub. Agora vai estar perfeito, com as caixas pretas para os códigos e os títulos no tamanho certo.
