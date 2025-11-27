@@ -74,18 +74,20 @@ npm run dev
 npm run build
 
 ## 🎯 Estrutura do Projeto
+```
 jean-minha-arte/
-├── 📁 public/images/          | Galeria de obras organizadas
-│   ├── 🎨 realismo/           | Obras em grafite
-│   ├── ✨ chibi/              | Personagens estilo japonês
-│   ├── 🌊 aguarela/           | Pinturas em água
+├── 📁 public/images/          # Galeria de obras organizadas
+│   ├── 🎨 realismo/           # Obras em grafite
+│   ├── ✨ chibi/              # Personagens estilo japonês
+│   ├── 🌊 aguarela/           # Pinturas em água
 │   └── ... (+10 categorias)
 ├── 📁 src/
-│   ├── 🎭 components/         | Componentes reutilizáveis
-│   ├── 📄 pages/              | Páginas da aplicação
-│   ├── 🗃️ data/               | Dados das obras de arte
-│   └── 🛠️ utils/              | Utilitários e funções
-└── ⚙️ configurações/          | Configurações do projeto
+│   ├── 🎭 components/         # Componentes reutilizáveis
+│   ├── 📄 pages/              # Páginas da aplicação
+│   ├── 🗃️ data/               # Dados das obras de arte
+│   └── 🛠️ utils/              # Utilitários e funções
+└── ⚙️ configurações/          # Configurações do projeto
+**
 
 ## 👨‍🎨 Sobre o Artista
 
