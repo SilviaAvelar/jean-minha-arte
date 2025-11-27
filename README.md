@@ -54,8 +54,10 @@ Uma galeria virtual que celebra a diversidade artística de **Jean Carlos**, apr
     "image-optimization": "Lazy Loading"
   }
 }
+```
 
-📦 Instalação e Uso
+## 📦 Instalação e Uso
+
 # Clone o repositório
 git clone https://github.com/SilviaAvelar/jean-minha-arte.git
 
@@ -71,7 +73,7 @@ npm run dev
 # Build para produção
 npm run build
 
-🎯 Estrutura do Projeto
+## 🎯 Estrutura do Projeto
 jean-minha-arte/
 ├── 📁 public/images/          # Galeria de obras organizadas
 │   ├── 🎨 realismo/           # Obras em grafite
@@ -85,10 +87,14 @@ jean-minha-arte/
 │   └── 🛠️ utils/              # Utilitários e funções
 └── ⚙️ configurações/          # Configurações do projeto
 
-👨‍🎨 Sobre o Artista
+## 👨‍🎨 Sobre o Artista
+
 Jean Carlos - Artista profissional com mais de 20 anos de experiência, especializado em múltiplas técnicas desde o realismo clássico até a arte digital contemporânea. Sua obra transita entre o tradicional e o moderno, sempre com excelência técnica e sensibilidade artística.
+
 "Cada traço conta uma história, cada cor expressa uma emoção" - Jean Carlos
-🌐 Deploy
+
+## 🌐 Deploy
+
 Status: 🟢 Online
 Plataforma: [Netlify/Vercel]
 URL: [em breve]
@@ -97,21 +103,18 @@ URL: [em breve]
 npm run build
 # → Upload da pasta 'dist' para a plataforma escolhida
 
-🤝 Contribuições
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
-<br>
-<div align="center">
-"A arte lava da alma a poeira do dia a dia." - Picasso
-<br><br>
-⭐ Deixe uma estrela se este projeto inspirou você!
-<br><br>
-![alt text](https://img.shields.io/github/stars/SilviaAvelar/jean-minha-arte?style=social)
+## 🤝 Contribuições
+Este projeto é um portfólio artístico, mas sugestões de melhorias na interface e experiência do usuário são sempre bem-vindas!
 
-![alt text](https://img.shields.io/github/forks/SilviaAvelar/jean-minha-arte?style=social)
+## 📄 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
+
+<div align="center">
+
+"A arte lava da alma a poeira do dia a dia." - Picasso
+⭐ Deixe uma estrela se este projeto inspirou você!
+
+https://img.shields.io/github/stars/SilviaAvelar/jean-minha-arte?style=social
+https://img.shields.io/github/forks/SilviaAvelar/jean-minha-arte?style=social
+
 </div>
-```
-O que fazer depois de colar:
-Salve o arquivo (Ctrl + S).
-Vá na aba do Git no VS Code.
-Faça o Commit ("Atualizando README") e dê o Sync/Push.
-Olhe no site do GitHub. Agora vai estar perfeito, com as caixas pretas para os códigos e os títulos no tamanho certo.
