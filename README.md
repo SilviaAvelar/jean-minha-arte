@@ -87,7 +87,7 @@ jean-minha-arte/
 │   ├── 🗃️ data/               # Dados das obras de arte
 │   └── 🛠️ utils/              # Utilitários e funções
 └── ⚙️ configurações/          # Configurações do projeto
-**
+```
 
 ## 👨‍🎨 Sobre o Artista
 
