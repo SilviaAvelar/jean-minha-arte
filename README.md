@@ -58,19 +58,19 @@ Uma galeria virtual que celebra a diversidade artística de **Jean Carlos**, apr
 
 ## 📦 Instalação e Uso
 
-Clone o repositório
+### Clone o repositório
 git clone https://github.com/SilviaAvelar/jean-minha-arte.git
 
-Entre no diretório
+### Entre no diretório
 cd jean-minha-arte
 
-Instale as dependências
+### Instale as dependências
 npm install
 
-Execute em desenvolvimento
+### Execute em desenvolvimento
 npm run dev
 
-Build para produção
+### Build para produção
 npm run build
 
 ## 🎯 Estrutura do Projeto
