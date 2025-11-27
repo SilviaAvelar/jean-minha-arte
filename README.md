@@ -54,6 +54,7 @@ Uma galeria virtual que celebra a diversidade artística de **Jean Carlos**, apr
     "image-optimization": "Lazy Loading"
   }
 }
+```
 
 📦 Instalação e Uso
 # Clone o repositório
