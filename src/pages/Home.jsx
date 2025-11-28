@@ -33,13 +33,13 @@ const Home = () => {
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent'
                         }}>
-                            Arte que Conta Histórias
+                            Arte que Conta Histórias.
                         </h1>
                         <p style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#bdc3c7' }}>
-                            Desenhos únicos feitos com paixão e técnica por Jean Carlos
+                            Desenhos únicos feitos com paixão e técnica por Jean Carlos.
                         </p>
                         <p style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#bdc3c7', maxWidth: '600px' }}>
-                            Artista profissional com 20+ anos de experiência especializado em
+                            Artista profissional com +20 anos de experiência especializado em
                             <strong> Realismo, Arte Digital, Óleo e técnicas tradicionais</strong>.
                             <p>De Portugal para o mundo.</p>
                         </p>

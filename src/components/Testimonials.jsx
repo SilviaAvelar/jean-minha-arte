@@ -1,20 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Testimonials = () => {
-    const testimonials = [
+    // Estado inicial com algumas avaliações de exemplo
+    const [testimonials, setTestimonials] = useState([
         {
             id: 1,
             name: "Maria Silva",
             text: "Fiquei maravilhada com o retrato que o Jean fez da minha família! Capturou perfeitamente nossas personalidades.",
-            rating: 5
+            rating: 5,
+            date: "2024-01-15"
         },
         {
             id: 2, 
             name: "João Santos",
             text: "Profissional incrível! O desenho do meu cachorro ficou tão real que parece que vai sair do papel.",
-            rating: 5
+            rating: 5,
+            date: "2024-01-10"
         }
-    ];
+    ]);
+
+    // Estado para o novo depoimento
+    const [newTestimonial, setNewTestimonial] = useState({
+        name: '',
+        text: '',
+        rating: 5
+    });
+
+    // Estado para mostrar/ocultar o formulário
+    const [showForm, setShowForm] = useState(false);
+
+    // Função para enviar nova avaliação
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        const testimonial = {
+            id: Date.now(), // ID único baseado no timestamp
+            name: newTestimonial.name,
+            text: newTestimonial.text,
+            rating: newTestimonial.rating,
+            date: new Date().toISOString().split('T')[0] // Data atual
+        };
+        
+        // Adiciona a nova avaliação no início da lista
+        setTestimonials([testimonial, ...testimonials]);
+        
+        // Limpa o formulário
+        setNewTestimonial({ name: '', text: '', rating: 5 });
+        setShowForm(false);
+        
+        alert('✅ Avaliação enviada com sucesso! Obrigado!');
+    };
+
+    // Componente para estrelas clicáveis
+    const StarRating = ({ rating, onRatingChange }) => {
+        return (
+            <div style={{ marginBottom: '15px' }}>
+                <label style={{ display: 'block', color: '#bdc3c7', marginBottom: '8px' }}>
+                    Avaliação:
+                </label>
+                <div style={{ display: 'flex', gap: '5px' }}>
+                    {[1, 2, 3, 4, 5].map(star => (
+                        <button
+                            key={star}
+                            type="button"
+                            onClick={() => onRatingChange(star)}
+                            style={{
+                                background: 'none',
+                                border: 'none',
+                                fontSize: '24px',
+                                cursor: 'pointer',
+                                color: star <= rating ? '#f39c12' : '#bdc3c7',
+                                padding: '0'
+                            }}
+                        >
+                            {star <= rating ? '★' : '☆'}
+                        </button>
+                    ))}
+                </div>
+            </div>
+        );
+    };
 
     return (
         <section style={{
@@ -23,41 +88,200 @@ const Testimonials = () => {
             textAlign: 'center'
         }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 20px' }}>
-                <h2 style={{ color: '#e74c3c', marginBottom: '50px' }}>O que dizem os clientes</h2>
+                <h2 style={{ color: '#e74c3c', marginBottom: '20px' }}>O que dizem os clientes</h2>
                 
+                {/* Botão para abrir formulário */}
+                {!showForm && (
+                    <button
+                        onClick={() => setShowForm(true)}
+                        style={{
+                            padding: '12px 25px',
+                            background: '#e74c3c',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '25px',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '16px',
+                            marginBottom: '40px'
+                        }}
+                    >
+                        ✍️ Deixe sua avaliação
+                    </button>
+                )}
+
+                {/* Formulário de Avaliação */}
+                {showForm && (
+                    <div style={{
+                        background: '#34495e',
+                        padding: '30px',
+                        borderRadius: '15px',
+                        marginBottom: '40px',
+                        maxWidth: '600px',
+                        margin: '0 auto 40px auto',
+                        border: '2px solid #e74c3c'
+                    }}>
+                        <h3 style={{ color: '#f39c12', marginBottom: '20px' }}>
+                            Conte sua experiência
+                        </h3>
+                        
+                        <form onSubmit={handleSubmit}>
+                            {/* Nome */}
+                            <div style={{ marginBottom: '15px' }}>
+                                <input
+                                    type="text"
+                                    placeholder="Seu nome *"
+                                    value={newTestimonial.name}
+                                    onChange={(e) => setNewTestimonial({...newTestimonial, name: e.target.value})}
+                                    required
+                                    style={{
+                                        width: '100%',
+                                        padding: '12px',
+                                        border: '1px solid #bdc3c7',
+                                        borderRadius: '8px',
+                                        background: '#2c3e50',
+                                        color: 'white',
+                                        fontSize: '16px'
+                                    }}
+                                />
+                            </div>
+                            
+                            {/* Avaliação com estrelas */}
+                            <StarRating 
+                                rating={newTestimonial.rating}
+                                onRatingChange={(rating) => setNewTestimonial({...newTestimonial, rating})}
+                            />
+                            
+                            {/* Texto da avaliação */}
+                            <div style={{ marginBottom: '20px' }}>
+                                <textarea
+                                    placeholder="Conte como foi sua experiência... *"
+                                    value={newTestimonial.text}
+                                    onChange={(e) => setNewTestimonial({...newTestimonial, text: e.target.value})}
+                                    required
+                                    rows="4"
+                                    style={{
+                                        width: '100%',
+                                        padding: '12px',
+                                        border: '1px solid #bdc3c7',
+                                        borderRadius: '8px',
+                                        background: '#2c3e50',
+                                        color: 'white',
+                                        fontSize: '16px',
+                                        resize: 'vertical'
+                                    }}
+                                />
+                            </div>
+                            
+                            {/* Botões */}
+                            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+                                <button 
+                                    type="submit"
+                                    style={{
+                                        padding: '12px 25px',
+                                        background: '#27ae60',
+                                        color: 'white',
+                                        border: 'none',
+                                        borderRadius: '8px',
+                                        cursor: 'pointer',
+                                        fontWeight: 'bold',
+                                        fontSize: '16px'
+                                    }}
+                                >
+                                    ✅ Enviar Avaliação
+                                </button>
+                                
+                                <button 
+                                    type="button"
+                                    onClick={() => setShowForm(false)}
+                                    style={{
+                                        padding: '12px 25px',
+                                        background: '#95a5a6',
+                                        color: 'white',
+                                        border: 'none',
+                                        borderRadius: '8px',
+                                        cursor: 'pointer',
+                                        fontWeight: 'bold',
+                                        fontSize: '16px'
+                                    }}
+                                >
+                                    ❌ Cancelar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                )}
+
+                {/* Lista de Avaliações */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
                     gap: '30px'
                 }}>
                     {testimonials.map(testimonial => (
                         <div key={testimonial.id} style={{
                             background: '#34495e',
-                            padding: '30px',
+                            padding: '25px',
                             borderRadius: '15px',
-                            textAlign: 'left'
+                            textAlign: 'left',
+                            border: '1px solid #3c5063'
                         }}>
-                            <div style={{ color: '#f39c12', marginBottom: '15px' }}>
-                                {'★'.repeat(testimonial.rating)}
+                            {/* Cabeçalho com estrelas e data */}
+                            <div style={{ 
+                                display: 'flex', 
+                                justifyContent: 'space-between', 
+                                alignItems: 'center',
+                                marginBottom: '15px'
+                            }}>
+                                <div style={{ color: '#f39c12', fontSize: '18px' }}>
+                                    {'★'.repeat(testimonial.rating)}
+                                    <span style={{ color: '#bdc3c7', fontSize: '14px', marginLeft: '8px' }}>
+                                        ({testimonial.rating}/5)
+                                    </span>
+                                </div>
+                                <span style={{ 
+                                    color: '#95a5a6', 
+                                    fontSize: '12px',
+                                    fontStyle: 'italic'
+                                }}>
+                                    {testimonial.date}
+                                </span>
                             </div>
+                            
+                            {/* Texto da avaliação */}
                             <p style={{ 
                                 color: '#bdc3c7', 
                                 fontStyle: 'italic',
                                 marginBottom: '20px',
-                                lineHeight: '1.6'
+                                lineHeight: '1.6',
+                                fontSize: '15px'
                             }}>
                                 "{testimonial.text}"
                             </p>
+                            
+                            {/* Nome do cliente */}
                             <p style={{ 
                                 color: '#e74c3c', 
                                 fontWeight: 'bold',
-                                margin: 0
+                                margin: 0,
+                                fontSize: '16px'
                             }}>
-                                - {testimonial.name}
+                                — {testimonial.name}
                             </p>
                         </div>
                     ))}
                 </div>
+
+                {/* Mensagem se não houver avaliações */}
+                {testimonials.length === 0 && (
+                    <div style={{
+                        color: '#bdc3c7',
+                        fontStyle: 'italic',
+                        padding: '40px'
+                    }}>
+                        Seja o primeiro a deixar uma avaliação! ✨
+                    </div>
+                )}
             </div>
         </section>
     );

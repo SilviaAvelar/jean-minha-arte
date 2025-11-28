@@ -14,12 +14,13 @@ const Contact = () => {
         referenceImage: null
     });
 
+    // Use a função de pricing CORRIGIDA que te passei anteriormente
     const priceInfo = calculatePrice(formData.size, formData.technique, formData.urgency);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const phoneNumber = '351911595194';
+        const phoneNumber = '351911595192';
 
         const message = `
 🖌️ *NOVA ENCOMENDA* 🖌️
@@ -30,16 +31,16 @@ const Contact = () => {
 *Tamanho:* ${formData.size}
 *Técnica:* ${formData.technique}
 *Urgência:* ${formData.urgency ? 'Sim' : 'Não'}
-*Preço:* R$ ${priceInfo.price}
+*Preço:* €${priceInfo.price}
 
 *Descrição:*
 ${formData.description}
-    `.trim();
+        `.trim();
 
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
 
-        alert(`Encomenda preparada!\\n\\nPreço: R$ ${priceInfo.price}\\n\\nVocê será redirecionado para o WhatsApp para finalizar.`);
+        alert(`Encomenda preparada!\\n\\nPreço: €${priceInfo.price}\\n\\nVocê será redirecionado para o WhatsApp para finalizar.`);
 
         setFormData({
             name: '',
@@ -48,7 +49,8 @@ ${formData.description}
             size: 'A4',
             technique: 'grafite',
             urgency: false,
-            description: ''
+            description: '',
+            referenceImage: null
         });
     };
 
@@ -61,9 +63,14 @@ ${formData.description}
         }}>
             <div style={{ maxWidth: '800px', margin: '0 auto' }}>
                 <h1 style={{ color: '#e74c3c', marginBottom: '10px' }}>Fazer Encomenda</h1>
-                <p style={{ color: '#bdc3c7', marginBottom: '30px' }}>
-                    Preencha o formulário e receba um orçamento instantâneo
-                </p>
+                <div style={{ color: '#bdc3c7', marginBottom: '30px' }}>
+                    <p style={{ marginBottom: '10px' }}>
+                        Preencha o formulário e receba um orçamento instantâneo.
+                    </p>
+                    <p>
+                        Ao enviar, você será redirecionado para o WhatsApp para finalizar sua encomenda.
+                    </p>
+                </div>
 
                 <div style={{
                     display: 'grid',
@@ -135,8 +142,9 @@ ${formData.description}
                                 <option value="retrato">Retrato</option>
                                 <option value="paisagem">Paisagem</option>
                                 <option value="animal">Animal</option>
-                                <option value="abstrato">Abstrato</option>
-                                <option value="fantasia">Fantasia</option>
+                                <option value="realismo">Realismo - Grafite</option>
+                                <option value="ministerio">Ministrações</option>
+                                <option value="chibi">Chibi</option>
                             </select>
                         </div>
 
@@ -183,6 +191,8 @@ ${formData.description}
                                 <option value="colorido">Lápis de Cor</option>
                                 <option value="aquarela">Aquarela</option>
                                 <option value="digital">Digital</option>
+                                <option value="hidrocor">Hidrocor</option>
+                                <option value="carvao">Carvão</option>
                             </select>
                         </div>
 
@@ -253,7 +263,7 @@ ${formData.description}
                             fontWeight: 'bold',
                             fontSize: '16px'
                         }}>
-                            📱 Enviar para WhatsApp - €{priceInfo.price}
+                            📱 Finalizar Encomenda
                         </button>
                     </form>
 

@@ -1,16 +1,60 @@
 import React, { useState } from 'react';
+
 import { artworksData } from '../data/artworksData';
 
 const ImageGallery = ({ selectedCategory = 'todos' }) => {
     const [selectedImage, setSelectedImage] = useState(null);
 
+    // Função para voltar ao topo
+    const scrollToTop = () => {
+        console.log('Tentando voltar ao topo...');
+        
+        // Tenta diferentes métodos
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        // Backup se não funcionar
+        setTimeout(() => {
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 100);
+    };
+
     // Filtrar obras baseado na categoria selecionada
-    const filteredArtworks = selectedCategory === 'todos' 
-        ? artworksData 
+    const filteredArtworks = selectedCategory === 'todos'
+        ? artworksData
         : artworksData.filter(art => art.category === selectedCategory);
 
     return (
-        <div>
+        <div style={{ position: 'relative' }}>
+            
+            {/* Botão Voltar ao Topo */}
+            <button
+                onClick={scrollToTop}
+                style={{
+                    position: 'fixed',
+                    bottom: '30px',
+                    right: '30px',
+                    padding: '15px',
+                    backgroundColor: '#e74c3c',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '50%',
+                    cursor: 'pointer',
+                    fontSize: '20px',
+                    boxShadow: '0 4px 15px rgba(0,0,0,0.5)',
+                    zIndex: 9999,
+                    width: '60px',
+                    height: '60px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontWeight: 'bold'
+                }}
+                title="Voltar ao topo"
+            >
+                ↑
+            </button>
+
             {/* Modal para imagem ampliada */}
             {selectedImage && (
                 <div style={{
@@ -26,6 +70,7 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                     zIndex: 2000,
                     padding: '20px'
                 }} onClick={() => setSelectedImage(null)}>
+                    
                     <div style={{
                         maxWidth: '90%',
                         maxHeight: '90%',
@@ -44,8 +89,9 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                                 maxHeight: '70vh'
                             }}
                         />
-                        <div style={{ 
-                            color: 'white', 
+                        
+                        <div style={{
+                            color: 'white',
                             textAlign: 'center',
                             marginTop: '15px'
                         }}>
@@ -55,29 +101,30 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                             <p style={{ color: '#bdc3c7', marginBottom: '5px' }}>
                                 {selectedImage.description}
                             </p>
-                            <div style={{ 
-                                display: 'flex', 
+                            <div style={{
+                                display: 'flex',
                                 justifyContent: 'center',
                                 gap: '15px',
                                 fontSize: '0.9rem'
                             }}>
-                                <span style={{ 
-                                    background: '#e74c3c', 
-                                    padding: '4px 12px', 
+                                <span style={{
+                                    background: '#e74c3c',
+                                    padding: '4px 12px',
                                     borderRadius: '12px'
                                 }}>
                                     {selectedImage.category.replace('-', ' - ')}
                                 </span>
-                                <span style={{ 
-                                    background: '#f39c12', 
-                                    padding: '4px 12px', 
+                                <span style={{
+                                    background: '#f39c12',
+                                    padding: '4px 12px',
                                     borderRadius: '12px'
                                 }}>
                                     {selectedImage.technique}
                                 </span>
                             </div>
                         </div>
-                        <button 
+                        
+                        <button
                             onClick={() => setSelectedImage(null)}
                             style={{
                                 position: 'absolute',
@@ -163,37 +210,37 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                         </div>
                         
                         <div style={{ padding: '20px' }}>
-                            <h4 style={{ 
-                                color: 'white', 
+                            <h4 style={{
+                                color: 'white',
                                 marginBottom: '8px',
                                 fontSize: '1.2rem'
                             }}>
                                 {artwork.title}
                             </h4>
-                            <p style={{ 
-                                color: '#bdc3c7', 
+                            <p style={{
+                                color: '#bdc3c7',
                                 fontSize: '0.9rem',
                                 marginBottom: '12px'
                             }}>
                                 {artwork.description}
                             </p>
-                            <div style={{ 
-                                display: 'flex', 
+                            <div style={{
+                                display: 'flex',
                                 justifyContent: 'space-between',
                                 alignItems: 'center'
                             }}>
-                                <span style={{ 
-                                    background: '#e74c3c', 
-                                    color: 'white', 
-                                    padding: '4px 12px', 
+                                <span style={{
+                                    background: '#e74c3c',
+                                    color: 'white',
+                                    padding: '4px 12px',
                                     borderRadius: '12px',
                                     fontSize: '0.8rem',
                                     fontWeight: 'bold'
                                 }}>
                                     {artwork.category.replace('-', ' - ')}
                                 </span>
-                                <span style={{ 
-                                    color: '#f39c12', 
+                                <span style={{
+                                    color: '#f39c12',
                                     fontSize: '0.8rem',
                                     fontWeight: 'bold'
                                 }}>
@@ -204,6 +251,9 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                     </div>
                 ))}
             </div>
+
+            {/* Espaço extra para garantir scroll */}
+            <div style={{ height: '50px' }}></div>
         </div>
     );
 };

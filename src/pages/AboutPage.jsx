@@ -2,20 +2,20 @@ import React from 'react';
 
 const AboutPage = () => {
     return (
-        <div style={{ 
-            marginTop: '80px', 
+        <div style={{
+            marginTop: '80px',
             padding: '40px 20px',
             minHeight: '100vh',
             background: '#1a1a1a',
             color: 'white'
         }}>
-            <div style={{ 
-                maxWidth: '1000px', 
+            <div style={{
+                maxWidth: '1000px',
                 margin: '0 auto',
                 lineHeight: '1.6'
             }}>
-                <h1 style={{ 
-                    color: '#e74c3c', 
+                <h1 style={{
+                    color: '#e74c3c',
                     textAlign: 'center',
                     marginBottom: '40px',
                     fontSize: '2.5rem'
@@ -30,20 +30,32 @@ const AboutPage = () => {
                     borderRadius: '15px',
                     marginBottom: '30px'
                 }}>
-                    <h2 style={{ color: '#f39c12', marginBottom: '20px' }}>
+                    <h2 style={{ color: '#f39c12', marginBottom: '25px' }}>
                         Jean Carlos Pereira
                     </h2>
-                    <p style={{ marginBottom: '15px', color: '#bdc3c7' }}>
-                        <strong>Localização:</strong> Viana do Castelo, Portugal
-                    </p>
-                    <p style={{ marginBottom: '15px', color: '#bdc3c7' }}>
-                        <strong>Formação:</strong> Técnico em Informática | <strong>Experiência:</strong> +20 anos
-                    </p>
-                    
-                    <p style={{ marginBottom: '15px', color: '#bdc3c7' }}>
-                        "Minha paixão pela arte vai além de simplesmente produzir peças, adoro compartilhar meu conhecimento 
-                        e ensinar as técnicas que desenvolvo ao criar minhas obras."
-                    </p>
+
+                    <div style={{ color: '#bdc3c7', lineHeight: '1.6' }}>
+                        <p style={{ marginBottom: '12px' }}>
+                            <strong>📍 Localização:</strong> Viana do Castelo, Portugal
+                        </p>
+                        <p style={{ marginBottom: '12px' }}>
+                            <strong>🎓 Formação:</strong> Técnico em Informática
+                        </p>
+                        <p style={{ marginBottom: '25px' }}>
+                            <strong>⏳ Experiência:</strong> +20 anos
+                        </p>
+
+                        <p style={{
+                            fontStyle: 'italic',
+                            borderLeft: '3px solid #f39c12',
+                            paddingLeft: '15px',
+                            margin: 0
+                        }}>
+                            "Minha paixão pela arte vai além de simplesmente produzir peças,
+                            adoro compartilhar meu conhecimento e ensinar as técnicas que
+                            desenvolvo ao criar minhas obras."
+                        </p>
+                    </div>
                 </div>
 
                 {/* Grid de Skills */}
@@ -68,7 +80,7 @@ const AboutPage = () => {
                                 'Pintura acrílica', 'Pintura a lápis de cor', 'Desenho a lápis de grafite',
                                 'Marcador', 'Carvão', 'Aguarela', 'Aerografia'
                             ].map((tech, index) => (
-                                <div key={index} style={{ 
+                                <div key={index} style={{
                                     padding: '8px 0',
                                     borderBottom: '1px solid #2c3e50'
                                 }}>
@@ -92,7 +104,7 @@ const AboutPage = () => {
                                 'Realismo', 'Cartoon', 'Chibi', 'Sketch', 'Caricatura',
                                 'HQ', 'Hiper realismo', 'Ministrações'
                             ].map((style, index) => (
-                                <div key={index} style={{ 
+                                <div key={index} style={{
                                     padding: '8px 0',
                                     borderBottom: '1px solid #2c3e50'
                                 }}>
@@ -114,9 +126,9 @@ const AboutPage = () => {
                         Expressão Individual e Coletiva
                     </h3>
                     <p style={{ color: '#bdc3c7', marginBottom: '15px' }}>
-                        A arte é uma forma poderosa de expressão individual, permitindo que os artistas comuniquem 
-                        suas visões de mundo pessoais e suas experiências únicas. Ao mesmo tempo, a arte também pode 
-                        ser uma forma de expressão coletiva, refletindo as preocupações, aspirações e identidades 
+                        A arte é uma forma poderosa de expressão individual, permitindo que os artistas comuniquem
+                        suas visões de mundo pessoais e suas experiências únicas. Ao mesmo tempo, a arte também pode
+                        ser uma forma de expressão coletiva, refletindo as preocupações, aspirações e identidades
                         de comunidades inteiras.
                     </p>
                 </div>
@@ -131,8 +143,8 @@ const AboutPage = () => {
                         O Impacto da Arte na Sociedade
                     </h3>
                     <p style={{ color: '#bdc3c7' }}>
-                        Além de seu valor estético e emocional, a arte também desempenha um papel importante na sociedade. 
-                        Ela pode ser uma ferramenta poderosa para promover a mudança social, aumentar a conscientização 
+                        Além de seu valor estético e emocional, a arte também desempenha um papel importante na sociedade.
+                        Ela pode ser uma ferramenta poderosa para promover a mudança social, aumentar a conscientização
                         sobre questões importantes e inspirar a ação política.
                     </p>
                 </div>

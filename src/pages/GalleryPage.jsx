@@ -48,7 +48,7 @@ const GalleryPage = () => {
                     textAlign: 'center',
                     fontSize: '1.1rem'
                 }}>
-                    Conheça alguns dos trabalhos do Jean
+                    Conheça alguns dos meus trabalhos.
                 </p>
 
                 {/* Filtros */}
