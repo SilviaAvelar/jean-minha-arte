@@ -1,5 +1,35 @@
 import React, { useState } from 'react';
 
+// Componente StarRating movido para FORA do componente Testimonials
+const StarRating = ({ rating, onRatingChange }) => {
+    return (
+        <div style={{ marginBottom: '15px' }}>
+            <label style={{ display: 'block', color: '#bdc3c7', marginBottom: '8px' }}>
+                Avaliação:
+            </label>
+            <div style={{ display: 'flex', gap: '5px' }}>
+                {[1, 2, 3, 4, 5].map(star => (
+                    <button
+                        key={star}
+                        type="button"
+                        onClick={() => onRatingChange(star)}
+                        style={{
+                            background: 'none',
+                            border: 'none',
+                            fontSize: '24px',
+                            cursor: 'pointer',
+                            color: star <= rating ? '#f39c12' : '#bdc3c7',
+                            padding: '0'
+                        }}
+                    >
+                        {star <= rating ? '★' : '☆'}
+                    </button>
+                ))}
+            </div>
+        </div>
+    );
+};
+
 const Testimonials = () => {
     // Estado inicial com algumas avaliações de exemplo
     const [testimonials, setTestimonials] = useState([
@@ -49,36 +79,6 @@ const Testimonials = () => {
         setShowForm(false);
         
         alert('✅ Avaliação enviada com sucesso! Obrigado!');
-    };
-
-    // Componente para estrelas clicáveis
-    const StarRating = ({ rating, onRatingChange }) => {
-        return (
-            <div style={{ marginBottom: '15px' }}>
-                <label style={{ display: 'block', color: '#bdc3c7', marginBottom: '8px' }}>
-                    Avaliação:
-                </label>
-                <div style={{ display: 'flex', gap: '5px' }}>
-                    {[1, 2, 3, 4, 5].map(star => (
-                        <button
-                            key={star}
-                            type="button"
-                            onClick={() => onRatingChange(star)}
-                            style={{
-                                background: 'none',
-                                border: 'none',
-                                fontSize: '24px',
-                                cursor: 'pointer',
-                                color: star <= rating ? '#f39c12' : '#bdc3c7',
-                                padding: '0'
-                            }}
-                        >
-                            {star <= rating ? '★' : '☆'}
-                        </button>
-                    ))}
-                </div>
-            </div>
-        );
     };
 
     return (
@@ -146,7 +146,7 @@ const Testimonials = () => {
                                 />
                             </div>
                             
-                            {/* Avaliação com estrelas */}
+                            {/* Avaliação com estrelas - AGORA FUNCIONA! */}
                             <StarRating 
                                 rating={newTestimonial.rating}
                                 onRatingChange={(rating) => setNewTestimonial({...newTestimonial, rating})}
