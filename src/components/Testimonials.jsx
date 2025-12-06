@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import { addDoc, collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react';
 
-// Componente StarRating movido para FORA do componente Testimonials
+// Importações necessárias para o Banco de Dados funcionar
+import { db } from '../services/firebaseConfig';
+
+// Componente de Estrelas (Mantido igual ao seu)
 const StarRating = ({ rating, onRatingChange }) => {
     return (
         <div style={{ marginBottom: '15px' }}>
@@ -31,54 +35,64 @@ const StarRating = ({ rating, onRatingChange }) => {
 };
 
 const Testimonials = () => {
-    // Estado inicial com algumas avaliações de exemplo
-    const [testimonials, setTestimonials] = useState([
-        {
-            id: 1,
-            name: "Maria Silva",
-            text: "Fiquei maravilhada com o retrato que o Jean fez da minha família! Capturou perfeitamente nossas personalidades.",
-            rating: 5,
-            date: "2024-01-15"
-        },
-        {
-            id: 2, 
-            name: "João Santos",
-            text: "Profissional incrível! O desenho do meu cachorro ficou tão real que parece que vai sair do papel.",
-            rating: 5,
-            date: "2024-01-10"
-        }
-    ]);
+    // Estado começa vazio (será preenchido pelo banco de dados)
+    const [testimonials, setTestimonials] = useState([]);
 
-    // Estado para o novo depoimento
+    // Estado para saber se está carregando os dados
+    const [loading, setLoading] = useState(true);
+
     const [newTestimonial, setNewTestimonial] = useState({
         name: '',
         text: '',
         rating: 5
     });
 
-    // Estado para mostrar/ocultar o formulário
     const [showForm, setShowForm] = useState(false);
 
-    // Função para enviar nova avaliação
-    const handleSubmit = (e) => {
+    // 1. LER DADOS DO FIREBASE (Carrega assim que abre a tela)
+    useEffect(() => {
+        // Pega a coleção 'avaliacoes' e ordena pela data de criação (mais novos primeiro)
+        const q = query(collection(db, "avaliacoes"), orderBy("createdAt", "desc"));
+
+        // Fica "ouvindo" o banco. Se alguém postar, atualiza na hora.
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+            const dadosDoBanco = snapshot.docs.map(doc => ({
+                id: doc.id, // O ID vem do Firebase
+                ...doc.data()
+            }));
+            setTestimonials(dadosDoBanco);
+            setLoading(false);
+        });
+
+        // Limpa a conexão se mudar de página
+        return () => unsubscribe();
+    }, []);
+
+    // 2. ENVIAR DADOS PARA O FIREBASE
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        const testimonial = {
-            id: Date.now(), // ID único baseado no timestamp
-            name: newTestimonial.name,
-            text: newTestimonial.text,
-            rating: newTestimonial.rating,
-            date: new Date().toISOString().split('T')[0] // Data atual
-        };
-        
-        // Adiciona a nova avaliação no início da lista
-        setTestimonials([testimonial, ...testimonials]);
-        
-        // Limpa o formulário
-        setNewTestimonial({ name: '', text: '', rating: 5 });
-        setShowForm(false);
-        
-        alert('✅ Avaliação enviada com sucesso! Obrigado!');
+
+        try {
+            // Salva no banco de dados
+            await addDoc(collection(db, "avaliacoes"), {
+                name: newTestimonial.name,
+                text: newTestimonial.text,
+                rating: newTestimonial.rating,
+                // Salva a data formatada para exibir
+                date: new Date().toLocaleDateString('pt-BR'),
+                // Salva a data real para ordenar
+                createdAt: new Date()
+            });
+
+            // Limpa o formulário e fecha
+            setNewTestimonial({ name: '', text: '', rating: 5 });
+            setShowForm(false);
+
+            alert('✅ Avaliação enviada com sucesso!');
+        } catch (error) {
+            console.error("Erro ao salvar: ", error);
+            alert("❌ Erro ao enviar. Verifique sua conexão.");
+        }
     };
 
     return (
@@ -89,7 +103,7 @@ const Testimonials = () => {
         }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 20px' }}>
                 <h2 style={{ color: '#e74c3c', marginBottom: '20px' }}>O que dizem os clientes</h2>
-                
+
                 {/* Botão para abrir formulário */}
                 {!showForm && (
                     <button
@@ -124,15 +138,14 @@ const Testimonials = () => {
                         <h3 style={{ color: '#f39c12', marginBottom: '20px' }}>
                             Conte sua experiência
                         </h3>
-                        
+
                         <form onSubmit={handleSubmit}>
-                            {/* Nome */}
                             <div style={{ marginBottom: '15px' }}>
                                 <input
                                     type="text"
                                     placeholder="Seu nome *"
                                     value={newTestimonial.name}
-                                    onChange={(e) => setNewTestimonial({...newTestimonial, name: e.target.value})}
+                                    onChange={(e) => setNewTestimonial({ ...newTestimonial, name: e.target.value })}
                                     required
                                     style={{
                                         width: '100%',
@@ -145,19 +158,17 @@ const Testimonials = () => {
                                     }}
                                 />
                             </div>
-                            
-                            {/* Avaliação com estrelas - AGORA FUNCIONA! */}
-                            <StarRating 
+
+                            <StarRating
                                 rating={newTestimonial.rating}
-                                onRatingChange={(rating) => setNewTestimonial({...newTestimonial, rating})}
+                                onRatingChange={(rating) => setNewTestimonial({ ...newTestimonial, rating })}
                             />
-                            
-                            {/* Texto da avaliação */}
+
                             <div style={{ marginBottom: '20px' }}>
                                 <textarea
                                     placeholder="Conte como foi sua experiência... *"
                                     value={newTestimonial.text}
-                                    onChange={(e) => setNewTestimonial({...newTestimonial, text: e.target.value})}
+                                    onChange={(e) => setNewTestimonial({ ...newTestimonial, text: e.target.value })}
                                     required
                                     rows="4"
                                     style={{
@@ -172,10 +183,9 @@ const Testimonials = () => {
                                     }}
                                 />
                             </div>
-                            
-                            {/* Botões */}
+
                             <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
-                                <button 
+                                <button
                                     type="submit"
                                     style={{
                                         padding: '12px 25px',
@@ -190,8 +200,8 @@ const Testimonials = () => {
                                 >
                                     ✅ Enviar Avaliação
                                 </button>
-                                
-                                <button 
+
+                                <button
                                     type="button"
                                     onClick={() => setShowForm(false)}
                                     style={{
@@ -212,6 +222,11 @@ const Testimonials = () => {
                     </div>
                 )}
 
+                {/* Carregando... */}
+                {loading && (
+                    <p style={{ color: '#bdc3c7' }}>Carregando avaliações...</p>
+                )}
+
                 {/* Lista de Avaliações */}
                 <div style={{
                     display: 'grid',
@@ -226,10 +241,9 @@ const Testimonials = () => {
                             textAlign: 'left',
                             border: '1px solid #3c5063'
                         }}>
-                            {/* Cabeçalho com estrelas e data */}
-                            <div style={{ 
-                                display: 'flex', 
-                                justifyContent: 'space-between', 
+                            <div style={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
                                 alignItems: 'center',
                                 marginBottom: '15px'
                             }}>
@@ -239,18 +253,17 @@ const Testimonials = () => {
                                         ({testimonial.rating}/5)
                                     </span>
                                 </div>
-                                <span style={{ 
-                                    color: '#95a5a6', 
+                                <span style={{
+                                    color: '#95a5a6',
                                     fontSize: '12px',
                                     fontStyle: 'italic'
                                 }}>
                                     {testimonial.date}
                                 </span>
                             </div>
-                            
-                            {/* Texto da avaliação */}
-                            <p style={{ 
-                                color: '#bdc3c7', 
+
+                            <p style={{
+                                color: '#bdc3c7',
                                 fontStyle: 'italic',
                                 marginBottom: '20px',
                                 lineHeight: '1.6',
@@ -258,10 +271,9 @@ const Testimonials = () => {
                             }}>
                                 "{testimonial.text}"
                             </p>
-                            
-                            {/* Nome do cliente */}
-                            <p style={{ 
-                                color: '#e74c3c', 
+
+                            <p style={{
+                                color: '#e74c3c',
                                 fontWeight: 'bold',
                                 margin: 0,
                                 fontSize: '16px'
@@ -273,7 +285,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Mensagem se não houver avaliações */}
-                {testimonials.length === 0 && (
+                {!loading && testimonials.length === 0 && (
                     <div style={{
                         color: '#bdc3c7',
                         fontStyle: 'italic',

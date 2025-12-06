@@ -38,11 +38,15 @@ const Home = () => {
                         <p style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#bdc3c7' }}>
                             Desenhos únicos feitos com paixão e técnica por Jean Carlos.
                         </p>
-                        <p style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#bdc3c7', maxWidth: '600px' }}>
+
+                        {/* CORREÇÃO AQUI: Troquei <p> por <div> */}
+                        <div style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#bdc3c7', maxWidth: '600px' }}>
                             Artista profissional com +20 anos de experiência especializado em
                             <strong> Realismo, Arte Digital, Óleo e técnicas tradicionais</strong>.
-                            <p>De Portugal para o mundo.</p>
-                        </p>
+                            <p style={{ marginTop: '10px' }}>De Portugal para o mundo.</p>
+                        </div>
+                        {/* Fim da correção */}
+
                         <div style={{ display: 'flex', gap: '20px' }}>
                             <Link to="/galeria" style={{
                                 padding: '12px 30px',
