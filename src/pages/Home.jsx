@@ -36,13 +36,13 @@ const Home = () => {
                             Arte que Conta Histórias.
                         </h1>
                         <p style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#bdc3c7' }}>
-                            Desenhos únicos feitos com paixão e técnica por Jean Carlos.
+                            Desenhos únicos feitos com paixão e técnica por Jean Pereira.
                         </p>
 
                         {/* CORREÇÃO AQUI: Troquei <p> por <div> */}
                         <div style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#bdc3c7', maxWidth: '600px' }}>
-                            Artista profissional com +20 anos de experiência especializado em
-                            <strong> Realismo, Arte Digital, Óleo e técnicas tradicionais</strong>.
+                            Artista profissional com mais de 20 anos de experiência especializado em
+                            <strong> Realismo, Arte Digital, Óleo, Pastel, Pintura Acrílica e técnicas tradicionais</strong>.
                             <p style={{ marginTop: '10px' }}>De Portugal para o mundo.</p>
                         </div>
                         {/* Fim da correção */}
