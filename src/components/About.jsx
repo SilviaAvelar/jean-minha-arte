@@ -34,19 +34,19 @@ const About = () => {
                     <div style={{ padding: '20px' }}>
                         <h4 style={{ color: '#f39c12', marginBottom: '10px' }}>🎨 Técnicas</h4>
                         <p style={{ color: '#bdc3c7', fontSize: '0.9rem' }}>
-                            Grafite, carvão, lápis de cor, aquarela
+                            Grafite, Carvão, Lápis de cor, Aguarela, Óleo, Pintura Acrílica, Arte Digital, Pastel, Hidrocor, Entre outras.
                         </p>
                     </div>
                     <div style={{ padding: '20px' }}>
                         <h4 style={{ color: '#f39c12', marginBottom: '10px' }}>⏱️ Experiência</h4>
                         <p style={{ color: '#bdc3c7', fontSize: '0.9rem' }}>
-                            +5 anos criando arte
+                            Mais de 20 anos criando arte
                         </p>
                     </div>
                     <div style={{ padding: '20px' }}>
                         <h4 style={{ color: '#f39c12', marginBottom: '10px' }}>📍 Estilo</h4>
                         <p style={{ color: '#bdc3c7', fontSize: '0.9rem' }}>
-                            Realista, expressivo, emocional
+                            Realismo, Caricatura, Chibi, Cartoon, Ministrações, Entre outros.
                         </p>
                     </div>
                 </div>
