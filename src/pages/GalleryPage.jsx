@@ -9,7 +9,7 @@ const GalleryPage = () => {
     { id: 'todos', name: 'Todos' },
     { id: 'realismo-grafite', name: 'Realismo - Grafite' },
     { id: 'arte-digital', name: 'Arte Digital' },
-    { id: 'europa-aguarela', name: 'Europa - Aguarela' }, 
+    { id: 'oleo', name: 'Óleo' }, 
     { id: 'hidrocor', name: 'Hidrocor' },
     { id: 'carvao', name: 'Carvão' },
     { id: 'lapis-cor', name: 'Lápis de Cor' },
@@ -17,7 +17,8 @@ const GalleryPage = () => {
     { id: 'chibi', name: 'Chibi' },
     { id: 'caricatura', name: 'Caricatura' },
     { id: 'ministracoes', name: 'Ministrações' },
-    { id: 'lapis-grafite', name: 'Desenho - Grafite' }
+    { id: 'lapis-grafite', name: 'Desenho - Grafite' },
+    { id: 'pastel', name: 'Pastel' }
 ];
 
     return (

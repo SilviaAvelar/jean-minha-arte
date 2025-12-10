@@ -564,10 +564,51 @@ export const artworksData = [
         description: 'Transparências e efeitos únicos da aguarela',
         image: '/images/aguarela/agua2.jpg'
     },
+    {
+        id: 70,
+        title: 'Paisagem Europeia',
+        category: 'aguarela',
+        technique: 'Aguarela',
+        description: 'Paisagem europeia em aguarela',
+        image: '/images/aguarela/eur1.jpg'
+    },
+    {
+        id: 71,
+        title: 'Paisagem Europeia',
+        category: 'aguarela',
+        technique: 'Aguarela',
+        description: 'Paisagem detalhada em aguarela',
+        image: '/images/aguarela/eur2.jpg'
+    },
+    {
+        id: 72,
+        title: 'Paisagem Europeia',
+        category: 'aguarela',
+        technique: 'Aguarela',
+        description: 'Técnica de aguarela sobre papel',
+        image: '/images/aguarela/eur3.jpg'
+    },
+    {
+        id: 73,
+        title: 'Paisagem Europeia',
+        category: 'aguarela',
+        technique: 'Aguarela',
+        description: 'Arte em aguarela inspirada na Europa',
+        image: '/images/aguarela/eur4.jpg'
+    },
+    {
+        id: 74,
+        title: 'Paisagem Europeia',
+        category: 'aguarela',
+        technique: 'Aguarela',
+        description: 'Pinceladas expressivas em aguarela',
+        image: '/images/aguarela/eur5.jpg'
+    },
+
 
     // Pintura Digital
     {
-        id: 70,
+        id: 75,
         title: 'Lucca',
         category: 'arte-digital',
         technique: 'Digital',
@@ -575,7 +616,7 @@ export const artworksData = [
         image: '/images/digital/dig1.jpg'
     },
     {
-        id: 71,
+        id: 76,
         title: 'He-Man',
         category: 'arte-digital',
         technique: 'Digital',
@@ -583,7 +624,7 @@ export const artworksData = [
         image: '/images/digital/dig2.jpg'
     },
     {
-        id: 72,
+        id: 77,
         title: 'Mulher Gavião',
         category: 'arte-digital',
         technique: 'Digital',
@@ -591,7 +632,7 @@ export const artworksData = [
         image: '/images/digital/dig3.jpg'
     },
     {
-        id: 73,
+        id: 78,
         title: 'Smurfs',
         category: 'arte-digital',
         technique: 'Digital',
@@ -599,7 +640,7 @@ export const artworksData = [
         image: '/images/digital/dig4.jpg'
     },
     {
-        id: 74,
+        id: 79,
         title: 'Smurfs',
         category: 'arte-digital',
         technique: 'Digital',
@@ -607,7 +648,7 @@ export const artworksData = [
         image: '/images/digital/dig5.jpg'
     },
     {
-        id: 75,
+        id: 80,
         title: 'Smurfs',
         category: 'arte-digital',
         technique: 'Digital',
@@ -615,7 +656,7 @@ export const artworksData = [
         image: '/images/digital/dig6.jpg'
     },
     {
-        id: 76,
+        id: 81,
         title: 'Smurfs',
         category: 'arte-digital',
         technique: 'Digital',
@@ -623,7 +664,7 @@ export const artworksData = [
         image: '/images/digital/dig7.jpg'
     },
     {
-        id: 77,
+        id: 82,
         title: 'Super-Man',
         category: 'arte-digital',
         technique: 'Digital',
@@ -631,9 +672,9 @@ export const artworksData = [
         image: '/images/digital/dig8.jpg'
     },
 
-    // Caricatura 
+    // Caricatura
     {
-        id: 78,
+        id: 83,
         title: 'Caricatura',
         category: 'caricatura',
         technique: 'Hidrocor/Grafite',
@@ -641,7 +682,7 @@ export const artworksData = [
         image: '/images/caricatura/tura1.jpg'
     },
     {
-        id: 79,
+        id: 84,
         title: 'Caricatura',
         category: 'caricatura',
         technique: 'Hidrocor/Grafite',
@@ -649,7 +690,7 @@ export const artworksData = [
         image: '/images/caricatura/tura2.jpg'
     },
     {
-        id: 80,
+        id: 85,
         title: 'Caricatura',
         category: 'caricatura',
         technique: 'Hidrocor/Grafite',
@@ -657,9 +698,9 @@ export const artworksData = [
         image: '/images/caricatura/tura3.jpg'
     },
 
-    // MINISTRAÇÕES
+    // MINISTRAÇÕES (Renumerado: Era 81 a 113, agora é 86 a 118)
     {
-        id: 81,
+        id: 86,
         title: 'Ministração Inspiradora',
         category: 'ministracoes',
         technique: 'Mista',
@@ -667,7 +708,7 @@ export const artworksData = [
         image: '/images/ministracoes/min1.jpg'
     },
     {
-        id: 82,
+        id: 87,
         title: 'Arte Ministerial',
         category: 'ministracoes',
         technique: 'Mista',
@@ -675,7 +716,7 @@ export const artworksData = [
         image: '/images/ministracoes/min2.jpg'
     },
     {
-        id: 83,
+        id: 88,
         title: 'Ministração Criativa',
         category: 'ministracoes',
         technique: 'Mista',
@@ -683,7 +724,7 @@ export const artworksData = [
         image: '/images/ministracoes/min3.jpg'
     },
     {
-        id: 84,
+        id: 89,
         title: 'Ilustração Ministerial',
         category: 'ministracoes',
         technique: 'Mista',
@@ -691,7 +732,7 @@ export const artworksData = [
         image: '/images/ministracoes/min4.jpg'
     },
     {
-        id: 85,
+        id: 90,
         title: 'Arte para Ministração',
         category: 'ministracoes',
         technique: 'Mista',
@@ -699,7 +740,7 @@ export const artworksData = [
         image: '/images/ministracoes/min5.jpg'
     },
     {
-        id: 86,
+        id: 91,
         title: 'Ministração Expressiva',
         category: 'ministracoes',
         technique: 'Mista',
@@ -707,7 +748,7 @@ export const artworksData = [
         image: '/images/ministracoes/min6.jpg'
     },
     {
-        id: 87,
+        id: 92,
         title: 'Ilustração Inspiradora',
         category: 'ministracoes',
         technique: 'Mista',
@@ -715,7 +756,7 @@ export const artworksData = [
         image: '/images/ministracoes/min7.jpg'
     },
     {
-        id: 88,
+        id: 93,
         title: 'Arte de Fé',
         category: 'ministracoes',
         technique: 'Mista',
@@ -723,7 +764,7 @@ export const artworksData = [
         image: '/images/ministracoes/min8.jpg'
     },
     {
-        id: 89,
+        id: 94,
         title: 'Ministração Colorida',
         category: 'ministracoes',
         technique: 'Mista',
@@ -731,7 +772,7 @@ export const artworksData = [
         image: '/images/ministracoes/min9.jpg'
     },
     {
-        id: 90,
+        id: 95,
         title: 'Ilustração de Fé',
         category: 'ministracoes',
         technique: 'Mista',
@@ -739,7 +780,7 @@ export const artworksData = [
         image: '/images/ministracoes/min10.jpg'
     },
     {
-        id: 91,
+        id: 96,
         title: 'Arte Ministerial Criativa',
         category: 'ministracoes',
         technique: 'Mista',
@@ -747,7 +788,7 @@ export const artworksData = [
         image: '/images/ministracoes/min11.jpg'
     },
     {
-        id: 92,
+        id: 97,
         title: 'Ministração Detalhada',
         category: 'ministracoes',
         technique: 'Mista',
@@ -755,7 +796,7 @@ export const artworksData = [
         image: '/images/ministracoes/min12.jpg'
     },
     {
-        id: 93,
+        id: 98,
         title: 'Ilustração para Ministração',
         category: 'ministracoes',
         technique: 'Mista',
@@ -763,7 +804,7 @@ export const artworksData = [
         image: '/images/ministracoes/min13.jpg'
     },
     {
-        id: 94,
+        id: 99,
         title: 'Arte Inspiradora',
         category: 'ministracoes',
         technique: 'Mista',
@@ -771,7 +812,7 @@ export const artworksData = [
         image: '/images/ministracoes/min14.jpg'
     },
     {
-        id: 95,
+        id: 100,
         title: 'Ministração Artística',
         category: 'ministracoes',
         technique: 'Mista',
@@ -779,7 +820,7 @@ export const artworksData = [
         image: '/images/ministracoes/min15.jpg'
     },
     {
-        id: 96,
+        id: 101,
         title: 'Ilustração Ministerial Detalhada',
         category: 'ministracoes',
         technique: 'Mista',
@@ -787,7 +828,7 @@ export const artworksData = [
         image: '/images/ministracoes/min16.jpg'
     },
     {
-        id: 97,
+        id: 102,
         title: 'Arte para Edificação',
         category: 'ministracoes',
         technique: 'Mista',
@@ -795,7 +836,7 @@ export const artworksData = [
         image: '/images/ministracoes/min17.jpg'
     },
     {
-        id: 98,
+        id: 103,
         title: 'Ministração Expressiva',
         category: 'ministracoes',
         technique: 'Mista',
@@ -803,7 +844,7 @@ export const artworksData = [
         image: '/images/ministracoes/min18.jpg'
     },
     {
-        id: 99,
+        id: 104,
         title: 'Ilustração de Esperança',
         category: 'ministracoes',
         technique: 'Mista',
@@ -811,7 +852,7 @@ export const artworksData = [
         image: '/images/ministracoes/min19.jpg'
     },
     {
-        id: 100,
+        id: 105,
         title: 'Arte Ministerial Vibrante',
         category: 'ministracoes',
         technique: 'Mista',
@@ -819,7 +860,7 @@ export const artworksData = [
         image: '/images/ministracoes/min20.jpg'
     },
     {
-        id: 101,
+        id: 106,
         title: 'Ministração Criativa',
         category: 'ministracoes',
         technique: 'Mista',
@@ -827,7 +868,7 @@ export const artworksData = [
         image: '/images/ministracoes/min21.jpg'
     },
     {
-        id: 102,
+        id: 107,
         title: 'Ilustração para Reflexão',
         category: 'ministracoes',
         technique: 'Mista',
@@ -835,7 +876,7 @@ export const artworksData = [
         image: '/images/ministracoes/min22.jpg'
     },
     {
-        id: 103,
+        id: 108,
         title: 'Arte de Ministração',
         category: 'ministracoes',
         technique: 'Mista',
@@ -843,7 +884,7 @@ export const artworksData = [
         image: '/images/ministracoes/min23.jpg'
     },
     {
-        id: 104,
+        id: 109,
         title: 'Ministração Inspiradora',
         category: 'ministracoes',
         technique: 'Mista',
@@ -851,7 +892,7 @@ export const artworksData = [
         image: '/images/ministracoes/min24.jpg'
     },
     {
-        id: 105,
+        id: 110,
         title: 'Ilustração Ministerial',
         category: 'ministracoes',
         technique: 'Mista',
@@ -859,7 +900,7 @@ export const artworksData = [
         image: '/images/ministracoes/min25.jpg'
     },
     {
-        id: 106,
+        id: 111,
         title: 'Arte para o Espírito',
         category: 'ministracoes',
         technique: 'Mista',
@@ -867,7 +908,7 @@ export const artworksData = [
         image: '/images/ministracoes/min26.jpg'
     },
     {
-        id: 107,
+        id: 112,
         title: 'Ministração Colorida',
         category: 'ministracoes',
         technique: 'Mista',
@@ -875,7 +916,7 @@ export const artworksData = [
         image: '/images/ministracoes/min27.jpg'
     },
     {
-        id: 108,
+        id: 113,
         title: 'Ilustração de Fé',
         category: 'ministracoes',
         technique: 'Mista',
@@ -883,7 +924,7 @@ export const artworksData = [
         image: '/images/ministracoes/min28.jpg'
     },
     {
-        id: 109,
+        id: 114,
         title: 'Arte Ministerial Expressiva',
         category: 'ministracoes',
         technique: 'Mista',
@@ -891,7 +932,7 @@ export const artworksData = [
         image: '/images/ministracoes/min29.jpg'
     },
     {
-        id: 110,
+        id: 115,
         title: 'Ministração Detalhada',
         category: 'ministracoes',
         technique: 'Mista',
@@ -899,7 +940,7 @@ export const artworksData = [
         image: '/images/ministracoes/min30.jpg'
     },
     {
-        id: 111,
+        id: 116,
         title: 'Ilustração para Edificação',
         category: 'ministracoes',
         technique: 'Mista',
@@ -907,7 +948,7 @@ export const artworksData = [
         image: '/images/ministracoes/min31.jpg'
     },
     {
-        id: 112,
+        id: 117,
         title: 'Arte Inspiradora',
         category: 'ministracoes',
         technique: 'Mista',
@@ -915,53 +956,11 @@ export const artworksData = [
         image: '/images/ministracoes/min32.jpg'
     },
     {
-        id: 113,
+        id: 118,
         title: 'Ministração Final',
         category: 'ministracoes',
         technique: 'Mista',
         description: 'Última obra desta série ministerial',
         image: '/images/ministracoes/min33.jpg'
-    },
-
-    // DESENHO DA EUROPA (corrigido)
-{
-    id: 114,
-    title: 'Paisagem Europeia',
-    category: 'europa-aguarela',
-    technique: 'Aguarela',
-    description: 'Paisagem europeia em aguarela',
-    image: '/images/europa/eur1.jpg'
-},
-{
-    id: 115,
-    title: 'Paisagem Europeia',
-    category: 'europa-aguarela',
-    technique: 'Aguarela',
-    description: 'Paisagem detalhada em aguarela',
-    image: '/images/europa/eur2.jpg'
-},
-{
-    id: 116,
-    title: 'Paisagem Europeia',
-    category: 'europa-aguarela',
-    technique: 'Aguarela',
-    description: 'Técnica de aguarela sobre papel',
-    image: '/images/europa/eur3.jpg'
-},
-{
-    id: 117,
-    title: 'Paisagem Europeia',
-    category: 'europa-aguarela',
-    technique: 'Aguarela',
-    description: 'Arte em aguarela inspirada na Europa',
-    image: '/images/europa/eur4.jpg'
-},
-{
-    id: 118,
-    title: 'Paisagem Europeia',
-    category: 'europa-aguarela',
-    technique: 'Aguarela',
-    description: 'Pinceladas expressivas em aguarela',
-    image: '/images/europa/eur5.jpg'
-}
+    }
 ];
