@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
-
 import { artworksData } from '../data/artworksData';
 
 const ImageGallery = ({ selectedCategory = 'todos' }) => {
     const [selectedImage, setSelectedImage] = useState(null);
 
-    // Função para voltar ao topo
+    // --- CORREÇÃO DO BOTÃO VOLTAR AO TOPO ---
     const scrollToTop = () => {
-        console.log('Tentando voltar ao topo...');
-        
-        // Tenta diferentes métodos
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        
-        // Backup se não funcionar
-        setTimeout(() => {
-            document.documentElement.scrollTop = 0;
-            document.body.scrollTop = 0;
-        }, 100);
+        const elementoTopo = document.getElementById("topo-galeria");
+        if (elementoTopo) {
+            // Rola suavemente até o elemento invisível que criamos
+            elementoTopo.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+            // Plano B: Força o scroll da janela
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     };
 
     // Filtrar obras baseado na categoria selecionada
@@ -27,6 +24,9 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
     return (
         <div style={{ position: 'relative' }}>
             
+            {/* --- ÂNCORA INVISÍVEL PARA O SCROLL --- */}
+            <div id="topo-galeria" style={{ position: 'absolute', top: '-100px', left: 0 }} />
+
             {/* Botão Voltar ao Topo */}
             <button
                 onClick={scrollToTop}
@@ -48,8 +48,11 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
+                    transition: 'transform 0.3s'
                 }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
                 title="Voltar ao topo"
             >
                 ↑
@@ -77,8 +80,31 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                         position: 'relative',
                         background: '#2c3e50',
                         borderRadius: '15px',
-                        padding: '20px'
-                    }}>
+                        padding: '20px',
+                        overflowY: 'auto' // Garante scroll se a tela for pequena
+                    }} onClick={(e) => e.stopPropagation()}> {/* Impede fechar ao clicar dentro */}
+                        
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            style={{
+                                position: 'absolute',
+                                top: '10px',
+                                right: '10px',
+                                background: '#e74c3c',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '50%',
+                                width: '30px',
+                                height: '30px',
+                                cursor: 'pointer',
+                                fontSize: '16px',
+                                fontWeight: 'bold',
+                                zIndex: 10
+                            }}
+                        >
+                            ✕
+                        </button>
+
                         <img
                             src={selectedImage.image}
                             alt={selectedImage.title}
@@ -86,7 +112,8 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                                 width: '100%',
                                 height: 'auto',
                                 borderRadius: '10px',
-                                maxHeight: '70vh'
+                                maxHeight: '70vh',
+                                objectFit: 'contain'
                             }}
                         />
                         
@@ -105,44 +132,27 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 gap: '15px',
-                                fontSize: '0.9rem'
+                                fontSize: '0.9rem',
+                                flexWrap: 'wrap'
                             }}>
                                 <span style={{
                                     background: '#e74c3c',
                                     padding: '4px 12px',
-                                    borderRadius: '12px'
+                                    borderRadius: '12px',
+                                    marginBottom: '5px'
                                 }}>
                                     {selectedImage.category.replace('-', ' - ')}
                                 </span>
                                 <span style={{
                                     background: '#f39c12',
                                     padding: '4px 12px',
-                                    borderRadius: '12px'
+                                    borderRadius: '12px',
+                                    marginBottom: '5px'
                                 }}>
                                     {selectedImage.technique}
                                 </span>
                             </div>
                         </div>
-                        
-                        <button
-                            onClick={() => setSelectedImage(null)}
-                            style={{
-                                position: 'absolute',
-                                top: '-15px',
-                                right: '-15px',
-                                background: '#e74c3c',
-                                color: 'white',
-                                border: 'none',
-                                borderRadius: '50%',
-                                width: '40px',
-                                height: '40px',
-                                cursor: 'pointer',
-                                fontSize: '18px',
-                                fontWeight: 'bold'
-                            }}
-                        >
-                            ✕
-                        </button>
                     </div>
                 </div>
             )}
@@ -165,10 +175,10 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                 </div>
             )}
 
-            {/* Grid de imagens */}
+            {/* Grid de imagens (Mantendo sua correção do auto-fill) */}
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
                 gap: '25px',
                 width: '100%'
             }}>
@@ -181,7 +191,9 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                             overflow: 'hidden',
                             cursor: 'pointer',
                             transition: 'all 0.3s ease',
-                            border: '2px solid #34495e'
+                            border: '2px solid #34495e',
+                            display: 'flex',
+                            flexDirection: 'column'
                         }}
                         onClick={() => setSelectedImage(artwork)}
                         onMouseEnter={(e) => {
@@ -204,30 +216,37 @@ const ImageGallery = ({ selectedCategory = 'todos' }) => {
                                 style={{
                                     width: '100%',
                                     height: '100%',
-                                    objectFit: 'cover'
+                                    objectFit: 'cover',
+                                    transition: 'transform 0.5s ease'
                                 }}
+                                onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'}
+                                onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
                             />
                         </div>
                         
-                        <div style={{ padding: '20px' }}>
-                            <h4 style={{
-                                color: 'white',
-                                marginBottom: '8px',
-                                fontSize: '1.2rem'
-                            }}>
-                                {artwork.title}
-                            </h4>
-                            <p style={{
-                                color: '#bdc3c7',
-                                fontSize: '0.9rem',
-                                marginBottom: '12px'
-                            }}>
-                                {artwork.description}
-                            </p>
+                        <div style={{ padding: '20px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                            <div>
+                                <h4 style={{
+                                    color: 'white',
+                                    marginBottom: '8px',
+                                    fontSize: '1.2rem'
+                                }}>
+                                    {artwork.title}
+                                </h4>
+                                <p style={{
+                                    color: '#bdc3c7',
+                                    fontSize: '0.9rem',
+                                    marginBottom: '12px'
+                                }}>
+                                    {artwork.description}
+                                </p>
+                            </div>
+                            
                             <div style={{
                                 display: 'flex',
                                 justifyContent: 'space-between',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                marginTop: 'auto'
                             }}>
                                 <span style={{
                                     background: '#e74c3c',

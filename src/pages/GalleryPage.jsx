@@ -18,7 +18,8 @@ const GalleryPage = () => {
     { id: 'caricatura', name: 'Caricatura' },
     { id: 'ministracoes', name: 'Ministrações' },
     { id: 'lapis-grafite', name: 'Desenho - Grafite' },
-    { id: 'pastel', name: 'Pastel' }
+    { id: 'pastel', name: 'Pastel' },
+    { id: 'pedras', name: 'Pedras' } 
 ];
 
     return (
