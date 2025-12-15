@@ -487,7 +487,7 @@ export const artworksData = [
         title: 'Arlequina',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Técnica de sombreamento com grafite',
+        description: 'Traços marcantes e atitude. O uso do grafite destaca a complexidade do cabelo e a expressão inconfundível da personagem.',
         image: '/images/grafite/gra1.jpg'
     },
     {
@@ -495,7 +495,7 @@ export const artworksData = [
         title: 'Mera',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Detalhes e texturas com lápis grafite',
+        description: 'A Rainha dos Mares. O movimento e a textura dos cabelos parecem fluir como água, graças ao sombreamento suave.',
         image: '/images/grafite/gra2.jpg'
     },
     {
@@ -503,7 +503,7 @@ export const artworksData = [
         title: 'Super Girl',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Retrato realista com técnica de grafite',
+        description: 'Heroísmo em movimento. A pose dinâmica entre as nuvens e o drapeado da capa transmitem a sensação de voo e força.',
         image: '/images/grafite/gra3.jpg'
     },
     {
@@ -511,15 +511,15 @@ export const artworksData = [
         title: 'Dr. Estranho',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Emoções capturadas com lápis grafite',
+        description: 'Misticismo no olhar. Um perfil sério e detalhado do Mago Supremo, com foco na textura da barba e nos detalhes da capa.',
         image: '/images/grafite/gra4.jpg'
     },
     {
         id: 64,
-        title: 'SuperMan',
+        title: 'O Homem de Aço',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Trabalho minucioso com grafite',
+        description: 'O símbolo da esperança. O perfil clássico e imponente do Superman, desenhado com linhas firmes que denotam sua força.',
         image: '/images/grafite/gra5.jpg'
     },
     {
@@ -527,73 +527,73 @@ export const artworksData = [
         title: 'Vampira',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Técnica clássica de desenho com grafite',
+        description: 'A beleza dos X-Men. O volume dos cabelos e a expressão determinada capturam a essência clássica desta poderosa mutante.',
         image: '/images/grafite/gra6.jpg'
     },
     {
         id: 66,
-        title: 'Chieetara',
+        title: 'Cheetara',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Realismo alcançado com lápis grafite',
+        description: 'Velocidade em preto e branco. A guerreira dos Thundercats com traços delicados que destacam sua agilidade e beleza.',
         image: '/images/grafite/gra7.jpg'
     },
     {
         id: 67,
-        title: 'Homem Aranha',
+        title: 'Homem-Aranha',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Traços expressivos e dinâmicos',
+        description: 'O escalador de paredes. A textura da teia e o movimento das mãos são realçados pelo contraste do grafite, criando uma pose clássica.',
         image: '/images/grafite/gra8.jpg'
     },
     {
         id: 68,
-        title: 'Hulk',
+        title: 'O Incrível Hulk',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Precisão e técnica com grafite',
+        description: 'Força bruta! O sombreamento intenso define cada músculo, transmitindo o poder e a fúria do Gigante Esmeralda.',
         image: '/images/grafite/gra9.jpg'
     },
     {
         id: 69,
-        title: 'Gwen Stacy',
+        title: 'Gwen Stacy - Transformação',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Contrastes e valores tonais',
+        description: 'O momento da fúria! A transformação impactante de Gwen Stacy em She-Hulk. Os destroços voando e a expressão intensa capturam o poder bruto dessa versão.',
         image: '/images/grafite/gra10.jpg'
     },
     {
         id: 70,
-        title: 'Fênix',
+        title: 'Fênix Negra',
         category: 'lapis-grafite',
         technique: 'Grafite',
-        description: 'Técnica tradicional de desenho',
+        description: 'O poder cósmico. A aura flamejante ao redor de Jean Grey foi criada com maestria, dando movimento e intensidade à obra.',
         image: '/images/grafite/gra11.jpg'
     },
 
     // --- AGUARELA (7 Obras) ---
     {
         id: 71,
-        title: 'Paisagem',
+        title: 'Árvore',
         category: 'aguarela',
         technique: 'Aguarela',
-        description: 'Técnica de aguarela com cores suaves',
+        description: 'A delicadeza da natureza. O tronco detalhado contrasta com o fundo azul suave, criando uma composição serena e poética.',
         image: '/images/aguarela/agua1.jpg'
     },
     {
         id: 72,
-        title: 'Porto',
+        title: 'Elétrico de Lisboa',
         category: 'aguarela',
         technique: 'Aguarela',
-        description: 'Transparências e efeitos únicos da aguarela',
+        description: 'Cena urbana clássica. O icônico bonde amarelo percorrendo as ruas de paralelepípedo, capturado com a leveza da aquarela.',
         image: '/images/aguarela/agua2.jpg'
     },
     {
         id: 73,
-        title: 'Paisagem Europeia',
+        title: 'Torre de Belém - Pen Sketch',
         category: 'aguarela',
         technique: 'Aguarela',
-        description: 'Paisagem europeia em aguarela',
+        description: 'Traços arquitetônicos precisos em preto e branco, destacando a complexidade e a beleza histórica do monumento português.',
         image: '/images/aguarela/eur1.jpg'
     },
     {
@@ -601,7 +601,7 @@ export const artworksData = [
         title: 'Paisagem Europeia',
         category: 'aguarela',
         technique: 'Aguarela',
-        description: 'Paisagem detalhada em aguarela',
+        description: 'O monumento banhado pela luz do dia. O céu azul vibrante realça a pedra calcária, criando um cartão-postal artístico.',
         image: '/images/aguarela/eur2.jpg'
     },
     {
@@ -609,15 +609,15 @@ export const artworksData = [
         title: 'Paisagem Europeia',
         category: 'aguarela',
         technique: 'Aguarela',
-        description: 'Técnica de aguarela sobre papel',
+        description: 'Uma visão nostálgica. O uso de tons terrosos e sépia traz uma atmosfera atemporal e clássica à arquitetura manuelina.',
         image: '/images/aguarela/eur3.jpg'
     },
     {
         id: 76,
-        title: 'Paisagem Europeia',
+        title: 'Arco Histórico',
         category: 'aguarela',
         technique: 'Aguarela',
-        description: 'Arte em aguarela inspirada na Europa',
+        description: 'Perspectiva e profundidade. As sombras projetadas no arco de pedra conduzem o olhar através da história das ruas antigas.',
         image: '/images/aguarela/eur4.jpg'
     },
     {
@@ -625,7 +625,7 @@ export const artworksData = [
         title: 'Paisagem Europeia',
         category: 'aguarela',
         technique: 'Aguarela',
-        description: 'Pinceladas expressivas em aguarela',
+        description: 'Charme europeu. A arquitetura tradicional e o céu límpido convidam a um passeio visual pelas ladeiras históricas.',
         image: '/images/aguarela/eur5.jpg'
     },
 
@@ -714,80 +714,80 @@ export const artworksData = [
     // --- CARICATURA (5 Obras) ---
     {
         id: 88,
-        title: 'Caricatura',
+        title: 'Brinde Relaxante',
         category: 'caricatura',
         technique: 'Hidrocor/Grafite',
-        description: 'Caricatura com traços exagerados e expressivos',
+        description: 'Momento de lazer eternizado. A expressão de satisfação e o drink na mão capturam o espírito de férias e descontração.',
         image: '/images/caricatura/tura1.jpg'
     },
     {
         id: 89,
-        title: 'Caricatura',
+        title: 'Vibe Aloha',
         category: 'caricatura',
         technique: 'Hidrocor/Grafite',
-        description: 'Caricatura com foco nas características marcantes',
+        description: 'Energia positiva! O cenário tropical de praia e a pose divertida transmitem alegria e o clima de verão.',
         image: '/images/caricatura/tura2.jpg'
     },
     {
         id: 90,
-        title: 'Caricatura',
+        title: 'Bênção Divina',
         category: 'caricatura',
         technique: 'Hidrocor/Grafite',
-        description: 'Expressões exageradas e personalidade destacada',
+        description: 'Um encontro espiritual. A representação carinhosa de Jesus abraçando a noiva traz uma mensagem de fé e proteção.',
         image: '/images/caricatura/tura3.jpg'
     },
     {
         id: 91,
-        title: 'Nova Caricatura 1',
+        title: 'O Guitarrista',
         category: 'caricatura',
         technique: 'Mista',
-        description: 'Nova caricatura expressiva',
+        description: 'Rock and Roll! A distorção artística destaca o instrumento musical e o sorriso, mostrando a paixão pela música.',
         image: '/images/caricatura/tura4.jpeg'
     },
     {
         id: 92,
-        title: 'Nova Caricatura 2',
+        title: 'Casal Feliz',
         category: 'caricatura',
         technique: 'Mista',
-        description: 'Nova caricatura expressiva',
+        description: 'Comemoração e amor. Os balões ao fundo e os sorrisos largos celebram um momento especial na vida do casal.',
         image: '/images/caricatura/tura5.jpeg'
     },
 
     // --- ÓLEO (1 Obra) ---
     {
         id: 93,
-        title: 'Pintura a Óleo',
+        title: 'A Majestade do Rei',
         category: 'oleo',
         technique: 'Óleo sobre Tela',
-        description: 'Obra clássica em tinta a óleo',
+        description: 'A riqueza da tinta a óleo traz vida a cada fio da juba e intensidade ao olhar dourado deste leão imponente.',
         image: '/images/oleo/oleo1.jpeg'
     },
 
     // --- PASTEL (1 Obra) ---
     {
         id: 94,
-        title: 'Desenho em Pastel',
+        title: 'A Majestade do Rei',
         category: 'pastel',
         technique: 'Pastel Seco',
-        description: 'Obra suave com técnica de pastel',
+        description: 'A riqueza da tinta a óleo traz vida a cada fio da juba e intensidade ao olhar dourado deste leão imponente.',
         image: '/images/pastel/pas1.jpeg'
     },
 
     // --- PEDRAS (18 Obras) ---
     {
         id: 95,
-        title: 'Arte em Pedra 1',
+        title: 'Jardim de Cores',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Pedras transformadas em joias coloridas. O mix de padrões geométricos e florais cria um conjunto alegre e decorativo.',
         image: '/images/pedras/ped1.jpeg'
     },
     {
         id: 96,
-        title: 'Arte em Pedra 2',
+        title: 'Família de Joaninhas',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Criatividade em forma de natureza. O formato natural das pedras foi perfeito para criar estas simpáticas joaninhas vermelhas.',
         image: '/images/pedras/ped2.jpeg'
     },
     {
@@ -800,140 +800,132 @@ export const artworksData = [
     },
     {
         id: 98,
-        title: 'Arte em Pedra 4',
+        title: 'Minimalismo Botânico',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Elegância em preto e branco. Traços finos desenham folhas e ramos delicados sobre a superfície natural da rocha.',
         image: '/images/pedras/ped4.jpeg'
     },
     {
         id: 99,
-        title: 'Arte em Pedra 5',
+        title: 'Gatinhos Curiosos',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Fofura esculpida. A pintura aproveita a curvatura da pedra para dar vida a gatinhos expressivos e cheios de charme.',
         image: '/images/pedras/ped5.jpeg'
     },
     {
         id: 100,
-        title: 'Arte em Pedra 6',
+        title: 'Mandala Floral',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Detalhes minuciosos. Padrões dourados e pretos se entrelaçam criando uma flor estilizada única.',
         image: '/images/pedras/ped6.jpeg'
     },
     {
         id: 101,
-        title: 'Arte em Pedra 7',
+        title: 'Abstrato Geométrico',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Arte moderna em miniatura. O contraste entre o azul turquesa, o branco e o preto cria uma composição visualmente impactante.',
         image: '/images/pedras/ped7.jpeg'
     },
     {
         id: 102,
-        title: 'Arte em Pedra 8',
+        title: 'Árvore Mosaico',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Explosão de cores. Padrões que lembram vitrais formam uma árvore vibrante e cheia de energia.',
         image: '/images/pedras/ped8.jpeg'
     },
     {
         id: 103,
-        title: 'Arte em Pedra 9',
+        title: 'Snoopy & Woodstock',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Amizade clássica. O traço simples e icônico do Snoopy abraçando seu amigo pássaro traz uma dose de nostalgia e ternura.',
         image: '/images/pedras/ped9.jpeg'
     },
     {
         id: 104,
-        title: 'Arte em Pedra 10',
+        title: 'Joaninhas e Espirais',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Natureza e formas. Uma combinação divertida entre o realismo das joaninhas e o abstrato das espirais azuis.',
         image: '/images/pedras/ped10.jpeg'
-    },
-    {
-        id: 105,
-        title: 'Arte em Pedra 11',
-        category: 'pedras',
-        technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
-        image: '/images/pedras/ped11.jpeg'
-    },
+    },    
     {
         id: 106,
-        title: 'Arte em Pedra 12',
+        title: 'Jardim de Cogumelos',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Um toque de magia. Cogumelos coloridos e detalhados criam um mini cenário de conto de fadas na pedra.',
         image: '/images/pedras/ped12.jpeg'
     },
     {
         id: 107,
-        title: 'Arte em Pedra 13',
+        title: 'A Charmosa Smurfette',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Charme e delicadeza. A icônica Smurfete com seus cabelos loiros e vestido branco, pintada com riqueza de detalhes sobre a pedra.',
         image: '/images/pedras/ped13.jpeg'
     },
     {
         id: 108,
-        title: 'Arte em Pedra 14',
+        title: 'Jardim Azul',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Cores vibrantes. O fundo azul céu destaca as grandes flores rosas e as pequenas abelhas, criando uma peça alegre.',
         image: '/images/pedras/ped14.jpeg'
     },
     {
         id: 109,
-        title: 'Arte em Pedra 15',
+        title: 'Folhas de Outono',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Tons terrosos. A delicadeza das folhas brancas pintadas sobre o fundo ocre remete ao aconchego da estação.',
         image: '/images/pedras/ped15.jpeg'
     },
     {
         id: 110,
-        title: 'Arte em Pedra 16',
+        title: 'Botânica Moderna',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Design sofisticado. Um conjunto elegante que mistura fundos brancos e ocre com silhuetas de folhas pretas.',
         image: '/images/pedras/ped16.jpeg'
     },
     {
         id: 111,
-        title: 'Arte em Pedra 17',
+        title: 'Simetria Natural',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Geometria e natureza. A pedra dividida em turquesa e preto cria um contraste perfeito para os símbolos botânicos centrais.',
         image: '/images/pedras/ped17.jpeg'
     },
     {
         id: 112,
-        title: 'Arte em Pedra 18',
+        title: 'Arte Folk',
         category: 'pedras',
         technique: 'Pintura em Pedra',
-        description: 'Arte delicada sobre pedra',
+        description: 'Riqueza de detalhes. Um conjunto fascinante com inspiração na arte popular, cheio de cores vivas e pontilhismo sobre fundo escuro.',
         image: '/images/pedras/ped18.jpeg'
     },
 
     // --- MINISTRAÇÕES (33 Obras) ---
     {
         id: 113,
-        title: 'Ministração Inspiradora',
+        title: 'Adoração e Louvor',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Arte para ministração espiritual',
+        description: 'A Harpa de Davi. Um símbolo de louvor e conexão espiritual, representada com partituras que evocam a música celestial.',
         image: '/images/ministracoes/min1.jpg'
     },
     {
         id: 114,
-        title: 'Arte Ministerial',
+        title: 'O Vaso de Barro',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Ilustração para mensagens inspiradoras',
+        description: 'Derramar do Espírito. O vaso sendo inclinado simboliza a entrega e o fluir da unção e das águas vivas.',
         image: '/images/ministracoes/min2.jpg'
     },
     {
@@ -946,242 +938,242 @@ export const artworksData = [
     },
     {
         id: 116,
-        title: 'Ilustração Ministerial',
+        title: 'A Lei e a Palavra',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Desenho para conteúdo espiritual',
+        description: 'As Tábuas dos Mandamentos. Uma representação sólida dos fundamentos da fé e da aliança eterna gravada na pedra.',
         image: '/images/ministracoes/min4.jpg'
     },
     {
         id: 117,
-        title: 'Arte para Ministração',
+        title: 'Quebra de Cadeias',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Trabalho artístico com propósito espiritual',
+        description: 'Libertação. A palavra "Pecado" se desfazendo e rachando representa a vitória sobre as amarras e a redenção.',
         image: '/images/ministracoes/min5.jpg'
     },
     {
         id: 118,
-        title: 'Ministração Expressiva',
+        title: 'Leão de Judá',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Arte que transmite mensagens de fé',
+        description: 'Força e Majestade. Um retrato sereno do Leão, simbolizando a soberania, a proteção e a paz real.',
         image: '/images/ministracoes/min6.jpg'
     },
     {
         id: 119,
-        title: 'Ilustração Inspiradora',
+        title: 'Escritas Sagradas',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Desenho para edificação espiritual',
+        description: 'A sabedoria antiga. O pergaminho e a pena representam o registro da Palavra e o legado das escrituras através dos tempos.',
         image: '/images/ministracoes/min7.jpg'
     },
     {
         id: 120,
-        title: 'Arte de Fé',
+        title: 'Santa Ceia',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Trabalho artístico com temática espiritual',
+        description: 'Comunhão. O cálice, as uvas e o pão compõem uma natureza morta simbólica que remete ao sacrifício e à aliança.',
         image: '/images/ministracoes/min8.jpg'
     },
     {
         id: 121,
-        title: 'Ministração Colorida',
+        title: 'O Espírito e o Leão',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Arte vibrante para mensagens de esperança',
+        description: 'Poder e Graça. Uma composição complexa unindo a descida da pomba (Espírito Santo) com a ferocidade do Leão de Judá.',
         image: '/images/ministracoes/min9.jpg'
     },
     {
         id: 122,
-        title: 'Ilustração de Fé',
+        title: 'A Verdade Liberta',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Desenho que inspira reflexão espiritual',
+        description: 'João 8:32. "E conhecereis a verdade, e a verdade vos libertará". A caligrafia no pergaminho destaca a promessa bíblica.',
         image: '/images/ministracoes/min10.jpg'
     },
     {
         id: 123,
-        title: 'Arte Ministerial Criativa',
+        title: 'O Caminho Estreito',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Expressão artística com propósito espiritual',
+        description: 'A Jornada. A estrada sinuosa que leva em direção à luz e à cruz representa a caminhada de fé e perseverança.',
         image: '/images/ministracoes/min11.jpg'
     },
     {
         id: 124,
-        title: 'Ministração Detalhada',
+        title: 'Carruagem de Fogo',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Trabalho minucioso para conteúdo espiritual',
+        description: 'A Jornada. A estrada sinuosa que leva em direção à luz e à cruz representa a caminhada de fé e perseverança.',
         image: '/images/ministracoes/min12.jpg'
     },
     {
         id: 125,
-        title: 'Ilustração para Ministração',
+        title: 'O Leão e o Cordeiro',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Arte que complementa mensagens espirituais',
+        description: 'Paz Real. A união profética entre a força do Leão e a mansidão do Cordeiro, simbolizando a dupla natureza de Cristo.',
         image: '/images/ministracoes/min13.jpg'
     },
     {
         id: 126,
-        title: 'Arte Inspiradora',
+        title: 'O Resgate',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Desenho que motiva e edifica',
+        description: 'Mão estendida. A representação poderosa de Pedro afundando e sendo salvo pela mão de Jesus sobre as águas.',
         image: '/images/ministracoes/min14.jpg'
     },
     {
         id: 127,
-        title: 'Ministração Artística',
+        title: 'O Fogo no Altar',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Expressão criativa com temática espiritual',
+        description: 'Elias no Carmelo. O momento em que o fogo desce do céu consumindo o sacrifício, provando o poder do Deus verdadeiro.',
         image: '/images/ministracoes/min15.jpg'
     },
     {
         id: 128,
-        title: 'Ilustração Ministerial Detalhada',
+        title: 'O Farol',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Trabalho elaborado para conteúdo espiritual',
+        description: 'Luz na tempestade. A torre firme guiando o barco em meio às ondas revoltas simboliza a direção de Deus nos momentos difíceis.',
         image: '/images/ministracoes/min16.jpg'
     },
     {
         id: 129,
-        title: 'Arte para Edificação',
+        title: 'O Lava-Pés',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Desenho que fortalece a fé',
+        description: 'Humildade e Serviço. A bacia, a toalha e as sandálias representam o exemplo maior de liderança servidora deixado por Jesus.',
         image: '/images/ministracoes/min17.jpg'
     },
     {
         id: 130,
-        title: 'Ministração Expressiva',
+        title: 'Azeite da Viúva',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Arte que comunica emoções espirituais',
+        description: 'Multiplicação. O azeite fluindo do vaso simboliza a provisão sobrenatural e a fé que não deixa a fonte secar.',
         image: '/images/ministracoes/min18.jpg'
     },
     {
         id: 131,
-        title: 'Ilustração de Esperança',
+        title: 'Escudo da Fé',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Desenho que transmite mensagens positivas',
+        description: 'Proteção Divina. O escudo dourado iluminado representa a defesa contra os dardos inflamados, simbolizando a segurança na fé.',
         image: '/images/ministracoes/min19.jpg'
     },
     {
         id: 132,
-        title: 'Arte Ministerial Vibrante',
+        title: 'Árvore Plantada',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Cores e formas para inspiração espiritual',
+        description: 'Salmos 1. A árvore frutífera junto ao ribeiro de águas vivas, representando o justo que prospera em tudo o que faz.',
         image: '/images/ministracoes/min20.jpg'
     },
     {
         id: 133,
-        title: 'Ministração Criativa',
+        title: 'Natureza Morta Bíblica',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Abordagem inovadora para arte espiritual',
+        description: 'Estudo e Devoção. O jarro e o manto compõem um cenário clássico que evoca tempos bíblicos e simplicidade.',
         image: '/images/ministracoes/min21.jpg'
     },
     {
         id: 134,
-        title: 'Ilustração para Reflexão',
+        title: 'O Trono e o Leão',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Arte que promove meditação espiritual',
+        description: 'Soberania Celestial. O Leão de Judá diante do Trono de Deus, representando o domínio eterno e a glória do Reino.',
         image: '/images/ministracoes/min22.jpg'
     },
     {
         id: 135,
-        title: 'Arte de Ministração',
+        title: 'O Bom Pastor',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Trabalho dedicado ao crescimento espiritual',
+        description: 'Proteção Absoluta. Jesus segurando o cajado, protegendo o cordeiro dos lobos famintos, simbolizando o cuidado e a segurança divina.',
         image: '/images/ministracoes/min23.jpg'
     },
     {
         id: 136,
-        title: 'Ministração Inspiradora',
+        title: 'Está Consumado',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Arte que toca o coração e a alma',
+        description: 'Dívida Paga. O prego rasgando a cédula de condenação na cruz simboliza que o preço foi pago e a liberdade foi conquistada.',
         image: '/images/ministracoes/min24.jpg'
     },
     {
         id: 137,
-        title: 'Ilustração Ministerial',
+        title: 'Ele Vive',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Desenho para conteúdo espiritual significativo',
+        description: 'A Ressurreição. A pedra removida e o túmulo vazio representam a vitória final sobre a morte e a esperança eterna.',
         image: '/images/ministracoes/min25.jpg'
     },
     {
         id: 138,
-        title: 'Arte para o Espírito',
+        title: 'A Fonte da Vida',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Trabalho artístico que alimenta a fé',
+        description: 'Redenção. Do sacrifício na cruz flui a água viva e a luz que rasgam as trevas, trazendo purificação e salvação.',
         image: '/images/ministracoes/min26.jpg'
     },
     {
         id: 139,
-        title: 'Ministração Colorida',
+        title: 'Vasos de Honra',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Paleta vibrante para mensagens espirituais',
+        description: 'Nas mãos do Oleiro. A composição com jarros de barro remete à nossa humanidade e à disposição para sermos usados por Deus.',
         image: '/images/ministracoes/min27.jpg'
     },
     {
         id: 140,
-        title: 'Ilustração de Fé',
+        title: 'A Pérola de Grande Valor',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Arte que expressa convicções espirituais',
+        description: 'O Reino dos Céus. A preciosidade da pérola brilhando na concha simboliza o tesouro espiritual pelo qual vale a pena entregar tudo.',
         image: '/images/ministracoes/min28.jpg'
     },
     {
         id: 141,
-        title: 'Arte Ministerial Expressiva',
+        title: 'Liberdade',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Emoções e espiritualidade através da arte',
+        description: 'Livres para Voar. A gaiola aberta e os pássaros partindo representam a alma que foi liberta das prisões do medo e do pecado.',
         image: '/images/ministracoes/min29.jpg'
     },
     {
         id: 142,
-        title: 'Ministração Detalhada',
+        title: 'Unção do Espírito',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Trabalho cuidadoso para conteúdo espiritual',
+        description: 'Tesouro em Vaso de Barro. O vaso quebrado permitindo o fluir, sob a descida da Pomba, simboliza o poder de Deus na nossa fragilidade.',
         image: '/images/ministracoes/min30.jpg'
     },
     {
         id: 143,
-        title: 'Ilustração para Edificação',
+        title: 'Fogo Santo',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Arte que constrói e fortalece',
+        description: 'A Sarça Ardente. O fogo que não consome e o Leão entre as chamas representam a santidade e a presença manifesta de Deus.',
         image: '/images/ministracoes/min31.jpg'
     },
     {
         id: 144,
-        title: 'Arte Inspiradora',
+        title: 'Clamor no Monte',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Desenho que motiva o crescimento espiritual',
+        description: 'Intimidade. A silhueta de alguém clamando com mãos levantadas, enquanto a pomba do Espírito desce, simboliza a resposta à oração.',
         image: '/images/ministracoes/min32.jpg'
     },
     {
         id: 145,
-        title: 'Ministração Final',
+        title: 'Batalha Espiritual',
         category: 'ministracoes',
         technique: 'Mista',
-        description: 'Última obra desta série ministerial',
+        description: 'Proteção Angelical. Um anjo poderoso empunhando a espada em meio às nuvens, representando a guerra invisível e a vitória celestial.',
         image: '/images/ministracoes/min33.jpg'
     }
 ];
