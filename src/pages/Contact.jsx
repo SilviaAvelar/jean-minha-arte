@@ -14,7 +14,7 @@ const Contact = () => {
         referenceImage: null
     });
 
-    // Use a função de pricing CORRIGIDA que te passei anteriormente
+    // Use a função de pricing 
     const priceInfo = calculatePrice(formData.size, formData.technique, formData.urgency);
 
     const handleSubmit = (e) => {
